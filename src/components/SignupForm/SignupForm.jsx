@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import styles from './SignupForm.module.css';
+import userService from '../../utils/userService';
 
 class SignupForm extends Component {
-
+   
     state = {
         name: '',
         email: '',
@@ -15,7 +16,8 @@ class SignupForm extends Component {
         name: '',
         email: '',
         password: '',
-        passwordConfirmation: ''
+        passwordConfirmation: '',
+        error: ''
         }
     }
 
@@ -29,33 +31,60 @@ class SignupForm extends Component {
 
     handleChange = evt => {
         this.setState({
-            [evt.target.name]: evt.target.value
+            error: '',
+            ...{[evt.target.name]: evt.target.value}
         })
     }
 
-    handleSubmit = evt => {
+    handleSubmit = async evt => {
         evt.preventDefault();
-        this.setState(this.getInitialState());
+        if(!this.isFormValid()) return;
+        try {
+            const {name, email, password} = this.state;
+            await userService.signup({name, email, password});
+            this.setState(this.getInitialState(), () => {
+                this.props.handleSignupOrLogin();
+                this.props.history.push('/');
+            });    
+        
+        } catch(error){
+            this.setState({
+                name: '',
+                email: '',
+                password: '',
+                passwordConfirmation: '',
+                error: error.message
+            })
+        }
+        
     }
-
-   render() {
+   
+    render() {
        return (
-        <form onSubmit={this.handleSubmit} className={styles.form}>
+            <section className={styles.section}>
+                {
+                    this.state.error && <p>{this.state.error}</p>
+                }
+           <form onSubmit={this.handleSubmit} >
              <fieldset>
-             <legend>Signup Form</legend>
+                 <legend>Signup Form</legend>
+
             <label htmlFor='name'>Full Name:</label>               
-               <input id="name" 
+               <input 
+               id='name' 
                name='name' 
-               type='text'
+               type='text' 
                value={this.state.name}
                onChange={this.handleChange}/>
 
             <label htmlFor='email'>Email:</label>
-               <input id='email' 
+               <input 
+               id='email' 
                name='email' 
                type='email' 
                value={this.state.email}
                onChange={this.handleChange}/>
+               
 
             <label htmlFor='password'>Password:</label>
                <input id='password' 
@@ -75,6 +104,7 @@ class SignupForm extends Component {
                <button disabled={!this.isFormValid()} type='submit'>Submit</button>
             </fieldset>
            </form>
+           </section>
        )
    }
 }
