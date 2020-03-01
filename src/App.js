@@ -1,5 +1,5 @@
-import React from 'react';
-import { Switch, Route} from 'react-router-dom';
+import React, {Component} from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import './App.css';
 
 //Reusables
@@ -11,6 +11,7 @@ import Home from './pages/Home/Home';
 import Planner from './pages/Planner/Planner';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
+import userService from './utils/userService';
 
 function App() {
   return (
