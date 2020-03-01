@@ -9,6 +9,8 @@ import Footer from '../src/components/Footer/Footer';
 //Pages
 import Home from './pages/Home/Home';
 import Planner from './pages/Planner/Planner';
+import Login from './pages/Login/Login';
+import Signup from './pages/Signup/Signup';
 
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
       <Route exact path='/planner' render={props =>
       <Planner />
       } />
+      <Route exact path='/login' render={props => (
+          <Login />
+        )} />
+        <Route exact path='/signup' render={props =>(
+          <Signup />
+        )} />
     </Switch>
     </div>  
     <Footer />

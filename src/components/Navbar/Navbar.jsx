@@ -8,8 +8,8 @@ const Navbar = (props) => {
                 <Link to='/'><h1>Ultimate Bucket List</h1></Link>
                 <ul>
                     <li><Link to='/planner'>Planner</Link></li>
-                    <li><Link to='/signup'>Signup</Link></li>
                     <li><Link to='/login'>Login</Link></li>
+                    <li><Link to= '/signup'>Signup</Link></li>
                 </ul>
         </nav>
     )
