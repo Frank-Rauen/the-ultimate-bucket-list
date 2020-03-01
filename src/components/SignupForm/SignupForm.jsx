@@ -19,6 +19,14 @@ class SignupForm extends Component {
         }
     }
 
+    isFormValid = () => {
+        return (
+            this.state.email && 
+            this.state.password && 
+        this.state.password === this.state.passwordConfirmation
+        );
+    }
+
     handleChange = evt => {
         this.setState({
             [evt.target.name]: evt.target.value
