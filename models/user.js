@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');   
+const bcrypt = require('bcrypt');
 const Schema = mongoose.Schema;
 
-const SALT_ROUNDS = 6;
+const SALT_ROUNDS = 6; 
 
 const userSchema = new Schema({
     name: String,
@@ -11,13 +11,10 @@ const userSchema = new Schema({
         lowercase: true,
         required: true,
         unique: true
+    
     },
-    password: {
-        type: String,
-        lowercase: true,
-        required: true,
-        unique: true
-    }
+    password:  String,
+        
 }, {
     timestamps: true
 })
