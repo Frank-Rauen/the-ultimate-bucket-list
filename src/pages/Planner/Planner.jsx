@@ -4,7 +4,7 @@ import styles from './Planner.module.css'
 const Planner = (props => {
     return (
         <main>
-            <h1>Planner</h1>
+            <h1>Favorite Drinks</h1>
         </main>
     )
 })
