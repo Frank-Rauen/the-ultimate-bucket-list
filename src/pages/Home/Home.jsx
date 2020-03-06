@@ -33,11 +33,7 @@ class Home extends Component {
     render() {
         return( 
         <div>
-            <form>
-            <input type='text' placeholder='Enter Drink'></input>
-            <button onClick={() => this.handleGetDrinks('')}>Submit</button>
-            </form>
-
+            
             <h1>Common Drinks:</h1>
             <button onClick={() => this.handleGetDrinks('margarita')}>Margarita</button>
             <button onClick={() => this.handleGetDrinks('bloody mary')}>Bloody Mary</button>
