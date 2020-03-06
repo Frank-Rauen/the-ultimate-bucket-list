@@ -4,7 +4,7 @@ import styles from './Footer.module.css';
 const Footer = (props) => {
     return (
         <footer className={styles.footer}>
-            <p>There's a whole world out there at your disposal</p>
+                <p>Copyright &copy; Frank Rauen {new Date().getFullYear()}</p>
         </footer>
     )
 }
