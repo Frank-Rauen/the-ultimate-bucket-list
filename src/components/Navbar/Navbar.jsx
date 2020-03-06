@@ -16,7 +16,7 @@ const Navbar = (props) => {
     </Fragment>
     return (
         <nav className={styles.navbar}>
-            <Link to='/'><h1>Cocktail Hour</h1></Link>
+            <Link to='/'><h1>Cocktail Cliffnotes</h1></Link>
             <ul>
                 {conditionalUI}
             </ul>

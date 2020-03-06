@@ -1,0 +1,42 @@
+.section {
+    text-align: center;
+    color: cornflowerblue;
+    border-radius: 1rem;
+    width: calc(50% - 6px);
+    border: 5px solid darkblue;
+    background-color: gray;
+    margin: 3px;
+    box-sizing: border-box;
+
+}
+
+.section ul li {
+    list-style: none;
+    flex-direction: column;
+
+}
+
+.button {
+    background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.section img {
+    width: 200px;
+}
+
+.page {
+    background-color: black;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+
+}

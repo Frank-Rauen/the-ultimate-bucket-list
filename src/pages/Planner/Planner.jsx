@@ -32,25 +32,26 @@ class Planner extends Component {
 
     render() {
         return( 
-        <div>
+        <div className={styles.page}>
             
             <h1>Common Drinks:</h1>
-            <button onClick={() => this.handleGetDrinks('margarita')}>Margarita</button>
-            <button onClick={() => this.handleGetDrinks('bloody mary')}>Bloody Mary</button>
-            <button onClick={() => this.handleGetDrinks('cosmopolitan')}>Cosmopolitan</button>
-            <button onClick={() => this.handleGetDrinks('mojito')}>Mojito</button>
-            <button onClick={() => this.handleGetDrinks('martini')}>Martini</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('margarita')}>Margarita</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('bloody mary')}>Bloody Mary</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('cosmopolitan')}>Cosmopolitan</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('mojito')}>Mojito</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('martini')}>Martini</button>
 
 
 
-
+            <div className={styles.flex}>
             {this.state.drinks.map(({idDrink, strDrink, strInstructions, 
             strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5, strIngredient6, strIngredient7,
-            strMeasure1, strMeasure2, strMeasure3, strMeasure4, strMeasure5, strMeasure6, strMeasure7}) => (
+            strMeasure1, strMeasure2, strMeasure3, strMeasure4, strMeasure5, strMeasure6, strMeasure7, strDrinkThumb}) => (
               
               <section key={idDrink} className={styles.section}>
                     <h1>{strDrink}</h1>
                     <p>{strInstructions}</p>
+                    <img src={strDrinkThumb} alt="Drink Picture"/>
                     
                     <ul>
                     <li>{strIngredient1} - {strMeasure1} </li>
@@ -65,7 +66,9 @@ class Planner extends Component {
                     </ul>
                 {/* <button onClick={() => this.addFavorite()}>Add to Favorites</button> */}
                 </section> 
+                
             ))}
+            </div>
         </div>)
     }
 }

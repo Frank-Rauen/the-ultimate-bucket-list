@@ -1,0 +1,19 @@
+.wallpaper img {
+  width: 100%;
+  position: relative;
+}
+
+.container {
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: gray;
+  opacity: 60%;
+  width: 500px;
+  border-radius: 25px;
+}
+
+.container h1 {
+    color: white;
+}
