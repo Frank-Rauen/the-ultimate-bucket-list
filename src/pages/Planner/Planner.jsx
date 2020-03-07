@@ -22,7 +22,7 @@ class Planner extends Component {
         
     } 
     componentDidMount() {
-        this.handleGetDrinks('');
+        this.handleGetDrinks('margarita');
         // this.addFavorite()
     }
     
