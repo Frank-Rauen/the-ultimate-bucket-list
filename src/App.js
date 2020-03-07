@@ -13,6 +13,8 @@ import Planner from './pages/Planner/Planner';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup'
 import userService from './utils/userService';
+import Ingredients from './pages/Ingredients/Ingredients'
+import Randomizer from './pages/Randomizer/Randomizer'
 
 class App extends Component {
 
@@ -39,6 +41,12 @@ class App extends Component {
       <Switch>
         <Route exact path='/' render={props =>
         <Home />
+      } />
+      <Route exact path ='/ingredients' render={props =>
+      <Ingredients /> 
+      } />
+      <Route exact path ='/randomizer' render={props =>
+      <Randomizer />
       } />
         <Route exact path='/planner' render={props => (
           userService.getUser()

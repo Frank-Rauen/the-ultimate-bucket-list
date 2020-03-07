@@ -6,7 +6,9 @@ import userService from '../../utils/userService';
 const Navbar = (props) => {
     const conditionalUI = userService.getUser()
     ? <Fragment>
-        <li><Link to='/planner'>Drinks Lookup</Link></li>
+        <li><Link to='/planner'>Most Popular Drinks</Link></li>
+        <li><Link to='/ingredients'>Full Inventory</Link></li>
+        <li><Link to='/randomizer'>Randomizer</Link></li>
         <li><Link to='' onClick={props.handleLogout}>Logout</Link></li>
     </Fragment>
     :
@@ -16,7 +18,7 @@ const Navbar = (props) => {
     </Fragment>
     return (
         <nav className={styles.navbar}>
-            <Link to='/'><h1>Cocktail Cliffnotes</h1></Link>
+            <Link to='/'><h1>Bartender's Best Friend</h1></Link>
             <ul>
                 {conditionalUI}
             </ul>

@@ -34,14 +34,29 @@ class Planner extends Component {
         return( 
         <div className={styles.page}>
             
-            <h1>Common Drinks:</h1>
+            <h1>Drink Selection:</h1>
             <button className={styles.button} onClick={() => this.handleGetDrinks('margarita')}>Margarita</button>
             <button className={styles.button} onClick={() => this.handleGetDrinks('bloody mary')}>Bloody Mary</button>
             <button className={styles.button} onClick={() => this.handleGetDrinks('cosmopolitan')}>Cosmopolitan</button>
             <button className={styles.button} onClick={() => this.handleGetDrinks('mojito')}>Mojito</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('old fashioned')}>Old Fashioned</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('negroni')}>Negroni</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('moscow mule')}>Moscow Mule</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('whiskey sour')}>Whiskey Sour</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('manhattan')}>Manhattan</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('mimosa')}>Mimosa</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('gimlet')}>Gimlet</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('sazerac')}>Sazerac</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('paloma')}>Paloma</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('sidecar')}>Sidecar</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('mint julep')}>Mint Julep</button>
             <button className={styles.button} onClick={() => this.handleGetDrinks('martini')}>Martini</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('daiquiri')}>Daiquiri</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('martinez')}>Martinez</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('white russian')}>White Russian</button>
+            <button className={styles.button} onClick={() => this.handleGetDrinks('long island iced tea')}>L I Iced Tea</button>
 
-
+            
 
             <div className={styles.flex}>
             {this.state.drinks.map(({idDrink, strDrink, strInstructions, 
