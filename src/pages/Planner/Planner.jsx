@@ -60,8 +60,9 @@ class Planner extends Component {
 
             <div className={styles.flex}>
             {this.state.drinks.map(({idDrink, strDrink, strInstructions, 
-            strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5, strIngredient6, strIngredient7,
-            strMeasure1, strMeasure2, strMeasure3, strMeasure4, strMeasure5, strMeasure6, strMeasure7, strDrinkThumb}) => (
+            strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5, strIngredient6, strIngredient7, strIngredient8,
+            strIngredient9, strIngredient10, strMeasure1, strMeasure2, strMeasure3, strMeasure4, strMeasure5, strMeasure6, strMeasure7, strMeasure8,
+            strMeasure9, strMeasure10, strDrinkThumb}) => (
               
               <section key={idDrink} className={styles.section}>
                     <h1>{strDrink}</h1>
@@ -76,6 +77,9 @@ class Planner extends Component {
                     <li>{strIngredient5} - {strMeasure5}</li>
                     <li>{strIngredient6} - {strMeasure6}</li>
                     <li>{strIngredient7} - {strMeasure7}</li>
+                    <li>{strIngredient8} - {strMeasure8}</li>
+                    <li>{strIngredient9} - {strMeasure9}</li>
+                    <li>{strIngredient10} - {strMeasure10}</li>
 
 
                     </ul>
