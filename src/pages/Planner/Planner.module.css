@@ -1,19 +1,27 @@
 .section {
     text-align: center;
-    color: rgb(5, 50, 134);
     border-radius: 1rem;
     width: calc(50% - 6px);
-    border: 5px solid darkblue;
+    border: 5px solid rgb(2, 30, 83);
     background-color: rgb(180, 180, 180);
     margin: 3px;
     box-sizing: border-box;
     padding: 8px;
+    color: rgb(5, 50, 134);
+
+}
+
+.section h1 {
+    font-weight: 700;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(2, 30, 83);
+
 }
 
 .section ul li {
     list-style: none;
     flex-direction: column;
-
 }
 
 .button {
@@ -32,6 +40,8 @@
 
 .section img {
     width: 200px;
+    border-radius: 15%;
+    border: 2px solid black;
 }
 
 .page {
