@@ -5,7 +5,7 @@ mongoose.connect(process.env.DATABASE_URL || 'mongodb+srv://frankrauen:fjr5361!@
         useNewUrlParser: true, 
         useCreateIndex: true,
         useUnifiedTopology: true 
-});
+}).catch(err => console.log(err));
 
 
 
